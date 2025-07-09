@@ -1,0 +1,60 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+public/images
+
+# Laravel cache and compiled files
+/bootstrap/cache/*
+/storage/framework/*
+/storage/logs/*
+/storage/debugbar
+
+# IDE / Editor folders
+.idea
+.vscode
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Composer
+composer.lock
+
+# NPM
+package-lock.json
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+/.env.*.backup
+.env.php
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+# Logs & Reports
+laravel.log
+*.log
+
+# Vite / Mix output
+public/build
+public/mix-manifest.json
+
+# Git specific
+*.swp
+*.swo
+*.bak
+*.tmp

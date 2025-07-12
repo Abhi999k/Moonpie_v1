@@ -39,6 +39,8 @@ RUN mkdir -p storage/framework/{cache,sessions,views} && \
     mkdir -p storage/logs && \
     chmod -R 775 storage bootstrap/cache
 
+# Add this before CMD
+RUN npm install && npm run build
 
 # Serve Laravel app
 CMD php artisan serve --host=0.0.0.0 --port=8080

@@ -34,5 +34,11 @@ RUN composer install --no-dev --optimize-autoloader
 # Expose port for Laravel server
 EXPOSE 8080
 
+# Set correct permissions
+RUN mkdir -p storage/framework/{cache,sessions,views} && \
+    mkdir -p storage/logs && \
+    chmod -R 775 storage bootstrap/cache
+
+
 # Serve Laravel app
 CMD php artisan serve --host=0.0.0.0 --port=8080

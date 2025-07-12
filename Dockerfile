@@ -39,6 +39,11 @@ RUN mkdir -p storage/framework/{cache,sessions,views} && \
     mkdir -p storage/logs && \
     chmod -R 775 storage bootstrap/cache
 
+# Install Node.js and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
+    
+
 # Add this before CMD
 RUN npm install && npm run build
 
